@@ -14,7 +14,7 @@ This project aims to create a functional e-commerce website using HTML, CSS, and
 
 ## Features:
 
-**Product Listing**: Display a list of products with images, descriptions, and prices.
+****Product Listing****: Display a list of products with images, descriptions, and prices.
 
 **Product Filtering**: Allow users to filter products by category, price range, or other relevant attributes.
 
@@ -33,4 +33,4 @@ Dynamic updates of cart totals as items are added or removed
 Animated checkout progress indicators
 Overall Objective:
 
-The project aims to demonstrate the ability to create a functional and user-friendly e-commerce website using HTML, CSS, and JavaScript, incorporating basic interactive responsiveness to cater to a wide range of users and devices.
+The project aims to demonstrate the ability to create a functional and user-friendly e-commerce website using `HTML`, `CSS`, and `JavaScript`, incorporating basic interactive responsiveness to cater to a wide range of users and devices.
