@@ -7,14 +7,19 @@ This project aims to create a functional e-commerce website using HTML, CSS, and
 ## Technologies:
 
 `HTML5` for structuring the website's content
+
 `CSS3` for styling the website's appearance and ensuring a consistent look across different devices
+
 `JavaScript` for adding interactivity, such as product filtering, shopping cart management, and checkout functionality
 
 ## Features:
 
 *Product Listing*: Display a list of products with images, descriptions, and prices.
+
 *Product Filtering*: Allow users to filter products by category, price range, or other relevant attributes.
+
 *Shopping Cart*: Enable users to add and remove items from their shopping cart, view cart contents, and update quantities.
+
 *Checkout Process*: Implement a secure checkout process that collects user information, shipping details, and payment method.
 
 ## Responsiveness:
