@@ -1,0 +1,236 @@
+@import url(https://fonts.googleapis.com/css?family=Kumbh+Sans:300,400,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Unbounded:400,700&subset=vietnamese);
+@import url(https://fonts.googleapis.com/css?family=Manrope:500,700);
+
+:root {
+    --orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+    --very-dark-blue: hsl(220, 13%, 13%);
+    --dark-greyish-blue: hsl(219, 9%, 45%);
+    --grayish-blue: hsl(220, 14%, 75%);
+    --white: hsl(0, 0%, 100%);
+    --light-greyish-blue: hsl(223, 64%, 98%);
+    --black: hsla(0, 0%, 0%, 0.75);
+}
+
+* {
+    /* font-family: 'Kumbh Sans', sans-serif; */
+    /* font-family: 'Unbounded', sans-serif; */
+    font-family: 'Manrope', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s ease-out;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 10px;
+    background-color: var(--orange);
+    border-radius: 20px;
+}
+
+.btn {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--orange);
+    padding: 1rem 5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-transform: none;
+}
+
+
+.header {
+    padding: 3rem 9%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    width: 100%;
+    display: flex;
+    flex: 1 1 45rem;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    border-bottom: .5px solid var(--grayish-blue);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.header .navbar .logo {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--black);
+    text-transform: none;
+    margin-right: 5rem;
+}
+
+.header .navbar #menubar {
+    display: none;
+    font-size: 2rem;
+    color: var(--dark-greyish-blue);
+    cursor: pointer;
+
+}
+
+.header .navbar a {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--dark-greyish-blue);
+    margin-left: 4rem;
+    cursor: pointer;
+}
+
+.header .navbar a>svg {
+    /* position: absolute; */
+    margin-left: 37rem;
+    font-size: 2rem;
+    color: var(--dark-greyish-blue);
+    cursor: pointer;
+}
+
+.header .navbar img {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+    right: 12rem;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 10rem;
+}
+
+.main .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    margin-top: 15rem;
+}
+
+.main .box-container .image {
+    flex: 1 1 45rem;
+}
+
+.main .box-container .image img {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.main .box-container .content {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.main .box-container .content .heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--orange);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.main .box-container .content h1  {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 2rem;
+}
+
+.main .box-container .content p  {
+    font-size: 1.5rem;
+    color: var(--dark-greyish-blue);
+    margin-bottom: 2rem;
+    text-transform: none;
+}
+
+.main .box-container .content p::first-letter  {
+    text-transform: capitalize;
+}
+
+.main .box-container .content .price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.main .box-container .content .discount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--orange);
+    background-color: var(--pale-orange);
+    padding: .5rem 1rem;
+}
+.main .box-container .content .original-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--grayish-blue);
+    text-decoration: line-through;
+}
+
+.main .box-container .button button>svg  {
+    font-size: 2rem;
+    color: var(--white);
+    margin-right: 1rem;
+}
+
+.main .box-container .button #order-btn {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--black);
+    background-color: var(--light-greyish-blue);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.main .box-container .button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    position: absolute;
+    bottom: 4rem;
+    right: 20rem;
+}
+
+.main .box-container .button #order-btn i {
+    font-size: 2rem;
+    color: var(--orange);
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
