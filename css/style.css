@@ -53,7 +53,7 @@ section {
     font-weight: 700;
     color: var(--white);
     background-color: var(--orange);
-    padding: 1rem 5rem;
+    padding: 1.5rem 6rem;
     border-radius: 1rem;
     cursor: pointer;
     text-transform: none;
@@ -72,8 +72,9 @@ section {
     justify-content: space-between;
     background-color: var(--white);
     border-bottom: .5px solid var(--grayish-blue);
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    /* border-bottom-left-radius: 50px; */
+    /* border-bottom-right-radius: 50px; */
+    border-bottom: 1px solid var(--black);
 }
 
 .header .navbar .logo {
@@ -95,27 +96,40 @@ section {
 
 .header .navbar a {
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: var(--dark-greyish-blue);
-    margin-left: 4rem;
+    margin-left: 6rem;
     cursor: pointer;
 }
 
+.header .navbar .image_cart {
+    /* display: none; */
+    position: relative;
+    float: right;
+    margin-left: 30rem;
+}
+
+.header .navbar .image_cart a:hover {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+
+.header .navbar a:hover {
+    border-bottom: 4px solid var(--orange);
+    padding-bottom: 30px;
+}
+
 .header .navbar a>svg {
-    /* position: absolute; */
-    margin-left: 37rem;
-    font-size: 2rem;
     color: var(--dark-greyish-blue);
     cursor: pointer;
 }
 
 .header .navbar img {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
     object-fit: cover;
     border-radius: 50%;
-    right: 12rem;
 }
 
 .main {
@@ -131,6 +145,7 @@ section {
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: space-between;
+    width: 90%;
     margin-top: 15rem;
 }
 
@@ -138,13 +153,34 @@ section {
     flex: 1 1 45rem;
 }
 
-.main .box-container .image img {
-    width: 70%;
+.main .box-container .image .first_img img {
+    width: 62%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    margin-left: 10rem;
 }
 
+.main .box-container .image .multi-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-left: 10rem;
+    margin-top: 2rem;
+}
+
+.main .box-container .image .multi-display img {
+    width: 15%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main .box-container .image .multi-display img:hover {
+    opacity: .6;
+    border: 3px solid var(--orange);
+}
 .main .box-container .content {
     max-width: 40%;
     display: flex;
@@ -166,13 +202,14 @@ section {
     font-size: 4rem;
     font-weight: 700;
     color: var(--black);
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .main .box-container .content p  {
     font-size: 1.5rem;
     color: var(--dark-greyish-blue);
     margin-bottom: 2rem;
+    line-height: 3rem;
     text-transform: none;
 }
 
@@ -192,6 +229,7 @@ section {
     color: var(--orange);
     background-color: var(--pale-orange);
     padding: .5rem 1rem;
+    margin-bottom: -4rem;
 }
 .main .box-container .content .original-price {
     font-size: 1.5rem;
@@ -200,37 +238,101 @@ section {
     text-decoration: line-through;
 }
 
-.main .box-container .button button>svg  {
-    font-size: 2rem;
-    color: var(--white);
-    margin-right: 1rem;
+.main .box-container .content .button button {
+    margin-right: 5px;
 }
 
-.main .box-container .button #order-btn {
+.main .box-container .content .button #order-btn {
     margin-top: 2rem;
     font-size: 2rem;
     font-weight: 700;
     color: var(--black);
     background-color: var(--light-greyish-blue);
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     border-radius: 1rem;
     cursor: pointer;
 }
 
-.main .box-container .button {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-    position: absolute;
-    bottom: 4rem;
-    right: 20rem;
-}
 
-.main .box-container .button #order-btn i {
+.main .box-container .content .button #order-btn i {
     font-size: 2rem;
     color: var(--orange);
     margin-right: 2rem;
     margin-left: 2rem;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+@media (max-width: 1540px) {
+    html {
+        font-size: 55%;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .header {
+        padding: 3rem;
+    }
+
+    .header .navbar a {
+        margin-left: 3rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1178px) {
+    html {
+        font-size: 50%;
+    }
+
+}
+
+@media (max-width: 1085) {
+    .main .box-container .content .button .btn {
+        font-size: 1rem;
+        padding: 1rem 1rem;
+    }
+
+    .main .box-container .content .button button #order-btn {
+        margin-top: 2rem;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--black);
+        background-color: var(--light-greyish-blue);
+        padding: .5rem 1rem;
+    }
+}    
