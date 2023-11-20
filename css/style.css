@@ -49,11 +49,12 @@ section {
 }
 
 .btn {
+    display: inline-block;
     font-size: 2rem;
     font-weight: 700;
     color: var(--white);
     background-color: var(--orange);
-    padding: 1.5rem 6rem;
+    padding: 1.4rem 6rem;
     border-radius: 1rem;
     cursor: pointer;
     text-transform: none;
@@ -64,60 +65,44 @@ section {
     padding: 3rem 9%;
     position: fixed;
     top: 0; left: 0; right: 0;
-    width: 100%;
     display: flex;
-    flex: 1 1 45rem;
     z-index: 1000;
     align-items: center;
     justify-content: space-between;
     background-color: var(--white);
     border-bottom: .5px solid var(--grayish-blue);
-    /* border-bottom-left-radius: 50px; */
-    /* border-bottom-right-radius: 50px; */
-    border-bottom: 1px solid var(--black);
 }
 
-.header .navbar .logo {
+.header .logo {
     font-family: 'Unbounded', sans-serif;
     font-weight: 700;
     font-size: 2.5rem;
     color: var(--black);
     text-transform: none;
-    margin-right: 5rem;
+    margin-left: 5rem;
 }
 
-.header .navbar #menubar {
+#menubar {
     display: none;
     font-size: 2rem;
     color: var(--dark-greyish-blue);
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    background: var(--black);
     cursor: pointer;
-
 }
 
 .header .navbar a {
     font-weight: 600;
     font-size: 1.8rem;
     color: var(--dark-greyish-blue);
-    margin-left: 6rem;
+    padding: 6rem;
     cursor: pointer;
 }
 
-.header .navbar .image_cart {
-    /* display: none; */
-    position: relative;
-    float: right;
-    margin-left: 30rem;
-}
-
-.header .navbar .image_cart a:hover {
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-
 .header .navbar a:hover {
     border-bottom: 4px solid var(--orange);
-    padding-bottom: 30px;
+    padding-bottom: 28px;
 }
 
 .header .navbar a>svg {
@@ -322,12 +307,26 @@ section {
 }
 
 @media (max-width: 1085) {
+    .btn {
+        font-size: 1rem;
+        padding: 1.4rem 3rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        text-transform: none;
+    }
+
+    .main .box-container .content .button {
+        margin-right: 5px;
+        font-size: 60rem;
+        display: block;
+    }
+
     .main .box-container .content .button .btn {
         font-size: 1rem;
         padding: 1rem 1rem;
     }
 
-    .main .box-container .content .button button #order-btn {
+    .main .box-container .content .button .btn {
         margin-top: 2rem;
         font-size: 1rem;
         font-weight: 700;
@@ -336,3 +335,38 @@ section {
         padding: .5rem 1rem;
     }
 }    
+
+@media (max-width: 991px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 2%;
+        /* right: 2rem; */
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        /* width: 30rem; */
+        /* height: calc(100vh  - 15.5rem); */
+        /* background: var(--black); */
+        border: var(--border);
+        /* transform: scale(0); */
+        /* opacity: 0; */
+        /* transform-origin: top right; */
+        /* transition: none; */
+    }
+
+    .header .navbar a {
+        font-size: 2rem;
+        display: block;
+        margin: 2.5rem;
+        color: var(--black);
+    }
+
+    .header .navbar.active {
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+    }
+}
